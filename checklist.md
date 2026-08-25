@@ -1,12 +1,30 @@
-# Checklist do Analista de BI - O que fazer quando o chefe pergunta "Por que caímos?"
+-- CASE: Análise de Performance de Vendas
+-- Objetivo: Onde está o risco de receita?
 
-### 1. QUANDO caiu? (Análise Temporal - MoM)
-SQL: SELECT MONTH(data), SUM(valor) FROM vendas GROUP BY MONTH(data)
-Power BI: Gráfico de Linhas
+-- PASSO 1: QUANDO caiu? (Validação MoM)
+SELECT 
+    MONTH(data_venda) as mes,
+    SUM(valor_venda) as total_mes
+FROM vendas
+GROUP BY MONTH(data_venda)
+ORDER BY mes;
 
-### 2. ONDE caiu? (Análise de Composição)
-SQL: GROUP BY canal e GROUP BY produto
-Power BI: Donut Chart e Colunas Clusterizado com Sort Desc
+-- PASSO 2: ONDE caiu? - Por Canal
+SELECT 
+    canal,
+    SUM(valor_venda) as total_canal,
+    SUM(valor_venda) * 100.0 / (SELECT SUM(valor_venda) FROM vendas) as percentual
+FROM vendas
+GROUP BY canal
+ORDER BY total_canal DESC;
 
-### 3. O QUE fazer? (Insight)
-Frase pronta: "Identifiquei queda de [X]% concentrada em [Canal/Produto]. Próximo passo é comparar MoM por [Canal/Produto]."
+-- PASSO 2: ONDE caiu? - Por Produto (Carro-chefe)
+SELECT 
+    produto,
+    SUM(valor_venda) as total_produto
+FROM vendas
+GROUP BY produto
+ORDER BY total_produto DESC;
+
+-- PASSO 3: VALIDAÇÃO TOTAL (KPI Card)
+SELECT SUM(valor_venda) as total_geral FROM vendas;

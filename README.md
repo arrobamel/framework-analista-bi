@@ -1,35 +1,18 @@
-# Framework do Analista de BI - Como não travar na pergunta "Por que caiu?"
-> Meu método de 3 passos para transformar queda de venda em decisão de investimento.
+# Framework do Analista de BI - Como decidir onde investir R$ 100k?
+> Meu método de 3 passos para transformar dado bagunçado em decisão de investimento.
 
 ### O Problema
-Todo gestor pergunta: "Por que caímos X%?". Analista júnior trava. Eu criei um checklist pra responder sem enrolação.
+Todo gestor pergunta: "Onde coloco meu dinheiro?". Analista júnior trava e só mostra gráfico. Eu criei um checklist pra responder com ROI.
 
 ### O Framework
-**1. QUANDO caiu? - Análise Temporal**
-Objetivo: Saber se é pontual ou tendência.
-Como faço: SQL `GROUP BY MONTH()` / Power BI - Gráfico de Linhas
+**1. QUANDO investir? - Análise Temporal**
+Objetivo: Saber quando o negócio dá mais lucro (sazonalidade).
+Como faço: SQL GROUP BY semana / Power BI - Gráfico de Linhas (achei pico na Semana 12: R$ 48.669,45)
 
-**2. ONDE caiu? - Análise de Composição**
-Objetivo: Quebrar o total pra achar o vilão.
-Como faço: SQL `GROUP BY canal, produto` / Power BI - Donut + Barras com Sort Desc
+**2. ONDE investir? - Análise de Composição**
+Objetivo: Quebrar o total pra achar o produto/canal com melhor retorno.
+Como faço: SQL GROUP BY produto / Power BI - Barras com Sort Desc (achei TCG com ROI 1,652)
 
 **3. O QUE fazer? - Insight para Decisão**
-Objetivo: Entregar hipótese + próximo passo, não só número.
-Frase padrão: "Queda de X% concentrada em [canal]. Próximo passo validar MoM por produto."
-
----
-### 🎯 Case Real: GeekStore - Onde investir R$ 100k?
-Apliquei o framework no dataset da GeekStore.
-
-**O que fiz:**
-- Transformei CSV bagunçado em Modelo Estrela (Dim_Canal, Dim_Produto, Fato_Vendas)
-- Validei tudo com SQL em `sql/auditoria.sql`
-
-**Resultado com o framework:**
-> Semana 12 apresentou R$ 48.669,45 de lucro. Análise de composição mostrou que produto TCG tem ROI de 1,652 (o maior).
-> **Decisão final:** Investir os R$ 100k em TCG, pois é o produto com maior retorno comprovado.
-
-**Tecnologias:** SQL Server, Power BI, DAX (Medidas: Total_Vendas, Lucro_Total, ROI)
-
-📊 **Dashboard:** [cole o link do seu dashboard-vendas-powerbi]
-📁 **Repositório:** github.com/arrobamel/framework-analista-bi
+Objetivo: Entregar decisão com número, não só gráfico.
+Frase padrão: "Investir R$ 100k em [produto] pois tem ROI de X e validado com lucro de R$ Y na Semana Z."

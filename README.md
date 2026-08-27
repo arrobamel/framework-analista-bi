@@ -1,5 +1,4 @@
 # Framework do Analista de BI - Como não travar na pergunta "Por que caiu?"
-
 > Meu método de 3 passos para transformar queda de venda em decisão de investimento.
 
 ### O Problema
@@ -19,20 +18,18 @@ Objetivo: Entregar hipótese + próximo passo, não só número.
 Frase padrão: "Queda de X% concentrada em [canal]. Próximo passo validar MoM por produto."
 
 ---
-### 🎯 Case Real: GeekStore - Onde investir R$ 50k?
-
+### 🎯 Case Real: GeekStore - Onde investir R$ 100k?
 Apliquei o framework no dataset da GeekStore.
 
 **O que fiz:**
 - Transformei CSV bagunçado em Modelo Estrela (Dim_Canal, Dim_Produto, Fato_Vendas)
-- Validei tudo com SQL em `auditoria.sql`
+- Validei tudo com SQL em `sql/auditoria.sql`
 
 **Resultado com o framework:**
 > Semana 12 apresentou R$ 48.669,45 de lucro. Análise de composição mostrou que produto TCG tem ROI de 1,652 (o maior).
-
-**Minha decisão como Analista de BI:** Alocar verba em TCG e pausar teste no canal de baixo ROI.
+> **Decisão final:** Investir os R$ 100k em TCG, pois é o produto com maior retorno comprovado.
 
 **Tecnologias:** SQL Server, Power BI, DAX (Medidas: Total_Vendas, Lucro_Total, ROI)
 
-📊 **Dashboard:** [cole aqui o link do seu dashboard-vendas-powerbi]
+📊 **Dashboard:** [cole o link do seu dashboard-vendas-powerbi]
 📁 **Repositório:** github.com/arrobamel/framework-analista-bi

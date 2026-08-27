@@ -1,8 +1,23 @@
-Analise o dataset .csv antes de construir o relatório
-1. Identifique a granularidade atual (qual é a linha?)
-2. Proponha o menor modelo estrela capaz de responder [SUA PERGUNTA]
+PROMPT DO PROFESSOR - MENTORIA POWER BI:
+
+Analise o dataset.csv antes de construirmos o relatório
+1. Identifique a granularidade atual
+2. Proponha o menor modelo estrela capaz de responder onde investir R$ 100 mil
 3. Separe dimensões, fato, chaves e relacionamentos
 4. Mapeie cada coluna da fonte para a tabela de destino
-5. Trate [suas métricas %] como valores informados para auditoria, não como métricas aditivas
-6. Explique em linguagem simples por que escolheu esse desenho
-7. Só depois, crie esse modelo no Power BI
+5. Trate conversão e ROI da fonte como valores informados para auditoria, não como métricas aditivas
+6. Explique em linguagem simples por que escolheu esse desenho e quais simplificações fez
+7. Depois da explicação, crie esse modelo no Power BI sem adicionar tabelas que não sejam necessárias
+
+---
+MINHA CAMADA DE DECISÃO (FRAMEWORK DE 3 PASSOS):
+
+Depois do modelo estrela criado, responda usando meu framework:
+1. QUANDO caiu? - Análise Temporal
+2. ONDE caiu? - Análise de Composição (canal/produto)
+3. O QUE fazer? - Decisão final: Onde investir R$ 50k?
+
+Resultado que validei com SQL:
+- Semana 12 = R$ 48.669,45 de lucro
+- ROI 1,652 no produto TCG
+- Decisão: Investir em TCG

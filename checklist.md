@@ -1,34 +1,28 @@
-# Framework Analista BI - Checklist Causa Raiz
+# Checklist - Onde investir R$ 100k? Framework GeekStore
 
-**CASE:** Análise de Performance de Vendas  
-**Objetivo:** Onde está o risco de receita?
+### Objetivo: Onde investir R$ 100k com maior retorno?
 
-### PASSO 1: QUANDO caiu? (Validação MoM)
+**PASSO 1: QUANDO investir? (Validação de Pico)**
 ```sql
-SELECT MONTH(data_venda) as mes, SUM(valor_venda) as total_mes 
-FROM vendas 
-GROUP BY MONTH(data_venda) 
-ORDER BY mes;
-```
+SELECT semana, SUM(lucro) as lucro_total
+FROM vendas
+GROUP BY semana
+ORDER BY lucro_total DESC;
+-- Resultado esperado: Semana 12 = R$ 48.669,45
 
-### PASSO 2: ONDE caiu? - Por Canal
-```sql
-SELECT canal, SUM(valor_venda) as total_canal, 
-SUM(valor_venda) * 100.0 / (SELECT SUM(valor_venda) FROM vendas) as percentual 
-FROM vendas 
-GROUP BY canal 
-ORDER BY total_canal DESC;
-```
+**PASSO 2: ONDE investir? - Por Canal**
+SELECT canal, SUM(lucro)/SUM(investimento) as ROI
+FROM vendas
+GROUP BY canal
+ORDER BY ROI DESC;
 
-### PASSO 2: ONDE caiu? - Por Produto (Carro-chefe)
-```sql
-SELECT produto, SUM(valor_venda) as total_produto 
-FROM vendas 
-GROUP BY produto 
-ORDER BY total_produto DESC;
-```
+**PASSO 2.1: ONDE investir? - Por Produto (Decisão final)**
+SELECT produto, SUM(lucro)/SUM(investimento) as ROI, SUM(lucro) as lucro_total
+FROM vendas
+GROUP BY produto
+ORDER BY ROI DESC;
+-- Resultado esperado: TCG = ROI 1,652 (maior)
 
-### PASSO 3: VALIDAÇÃO TOTAL (KPI Card)
-```sql
-SELECT SUM(valor_venda) as total_geral FROM vendas;
-```
+**PASSO 3: O QUE fazer?**
+Decisão: Investir os R$ 100k em TCG, produto com maior ROI validado.
+

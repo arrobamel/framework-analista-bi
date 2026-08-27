@@ -1,8 +1,0 @@
-Analise o dataset .csv antes de construir o relatório
-1. Identifique a granularidade atual (qual é a linha?)
-2. Proponha o menor modelo estrela capaz de responder [SUA PERGUNTA]
-3. Separe dimensões, fato, chaves e relacionamentos
-4. Mapeie cada coluna da fonte para a tabela de destino
-5. Trate [suas métricas %] como valores informados para auditoria, não como métricas aditivas
-6. Explique em linguagem simples por que escolheu esse desenho
-7. Só depois, crie esse modelo no Power BI

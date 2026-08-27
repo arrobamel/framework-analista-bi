@@ -1,4 +1,4 @@
-PROMPT DO PROFESSOR - MENTORIA POWER BI:
+PROMPT DO PROFESSOR - Emerson Sousa Senior Data Platform Engineer
 
 Analise o dataset.csv antes de construirmos o relatorio
 1. Identifique a granularidade atual

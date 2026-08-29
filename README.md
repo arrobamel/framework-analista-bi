@@ -35,7 +35,7 @@ Como fiz: SQL GROUP BY produto / Power BI - Barras com Sort Desc
 Resultado: Produto TCG com ROI de 1,652
 
 3. O QUE fazer? - Decisao Final
-Decisao: Investir os R$ 100k em TCG, pois apresentou maior ROI validado via SQL e pico de lucro na Semana 12.
+- Investir os R$ 100k em TCG, pois apresentou maior ROI validado via SQL e pico de lucro na Semana 12.
 
 ## Tecnologias
 SQL, Power BI (Modelo Estrela), GitHub

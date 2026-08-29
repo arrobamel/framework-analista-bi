@@ -22,24 +22,26 @@ Prompt base do professor (arquivo prompts/prompt_decisao_powerbi.txt):
 - Tratar conversao e ROI como auditoria
 - Criar modelo no Power BI
 
-## O Framework aplicado (Professor Emerson Sousa)
+## O Framework Aplicado (Professor Emerson Sousa)
 
-1. QUANDO investir? - Analise Temporal
-2. Objetivo: Validar sazonalidade e picos de lucro.
-Como fiz: SQL GROUP BY semana / Power BI - Grafico de Linhas
-Resultado: Semana 12 com lucro de R$ 48.669,45
+### 1. QUANDO investir? - Análise Temporal
+**Objetivo:** Validar sazonalidade e picos de lucro.  
+**Como fiz:** SQL `GROUP BY semana` / Power BI - Gráfico de Linhas  
+**Resultado:** Semana 12 com lucro de R$ 48.669,45
 
-3. ONDE investir? - Analise de Composicao
-Objetivo: Quebrar o total para achar o produto com melhor retorno.
-Como fiz: SQL GROUP BY produto / Power BI - Barras com Sort Desc
-Resultado: Produto TCG com ROI de 1,652
+### 2. ONDE investir? - Análise de Composição
+**Objetivo:** Quebrar o total para achar o produto com melhor retorno.  
+**Como fiz:** SQL `GROUP BY produto` / Power BI - Barras com Sort Desc  
+**Resultado:** Produto TCG com ROI de 1,652
 
-4. O QUE fazer? - Decisao Final
-- Investir os R$ 100k em TCG, pois apresentou maior ROI validado via SQL e pico de lucro na Semana 12.
+### 3. O QUE fazer? - Decisão Final
+> Investir os R$ 100k em TCG, pois apresentou maior ROI validado via SQL e pico de lucro na Semana 12.
 
-## Tecnologias
-SQL, Power BI (Modelo Estrela), GitHub
+---
 
-📸 Preview do Dashboard
+### 🔧 Tecnologias
+`SQL` `Power BI (Modelo Estrela)` `GitHub`
+
+### 📸 Preview do Dashboard
 
 <img width="909" height="465" alt="image" src="https://github.com/user-attachments/assets/b2a9d989-882b-4bd0-ba5d-6121a7e997c0" />

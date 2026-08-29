@@ -44,4 +44,4 @@ Prompt base do professor (arquivo prompts/prompt_decisao_powerbi.txt):
 
 ### 📸 Preview do Dashboard
 
-<img width="909" height="465" alt="image" src="https://github.com/user-attachments/assets/b2a9d989-882b-4bd0-ba5d-6121a7e997c0" />
+<img width="1098" height="562" alt="image" src="https://github.com/user-attachments/assets/3c1b9a92-7b79-47df-9110-302e317c703c" />

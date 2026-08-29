@@ -1,3 +1,11 @@
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-02569B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![DAX](https://img.shields.io/badge/DAX-7D1F1F?style=for-the-badge)
+![ROI 137%](https://img.shields.io/badge/ROI-137%25-brightgreen?style=for-the-badge)
+
+# Framework Analista BI
+Checklist padrão que eu uso para queda de lucro - análise atemporal, composição e insight
+
 # Framework do Analista de BI - Como decidir onde investir R$ 100k?
 
 Projeto desenvolvido no Bootcamp de BI da DIO com base no prompt e framework ensinado pelo professor Emerson Sousa.

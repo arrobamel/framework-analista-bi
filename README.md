@@ -39,3 +39,5 @@ Decisao: Investir os R$ 100k em TCG, pois apresentou maior ROI validado via SQL 
 
 ## Tecnologias
 SQL, Power BI (Modelo Estrela), GitHub
+
+<img width="909" height="465" alt="image" src="https://github.com/user-attachments/assets/b2a9d989-882b-4bd0-ba5d-6121a7e997c0" />
